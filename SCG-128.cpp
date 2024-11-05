@@ -5,19 +5,19 @@ class SCG128 {
 	public:
 		SCG128(__uint128_t seed, __uint128_t multiplier, __uint128_t additive,unsigned int shift) {
 			if (multiplier == 0) {
-				throw std::invalid_argument("The multiplier can not be 0 (data loss)")
+				throw std::invalid_argument("The multiplier can not be 0 (data loss)");
 			}
 			if (multiplier == 1) {
-				throw std::invalid_argument("The multiplier can not be 1 (Why would you even try?)")
+				throw std::invalid_argument("The multiplier can not be 1 (Why would you even try?)");
 			}
 			if ((multiplier & 1) == 0) {
-				throw std::invalid_argument("The multiplier must be odd (data loss)")
+				throw std::invalid_argument("The multiplier must be odd (data loss)");
 			}
 			if (shift == 0) {
-				throw std::invalid_argument("The shift value can not be 0 (data loss)")
+				throw std::invalid_argument("The shift value can not be 0 (data loss)");
 			}
 			if (shift > 127) {
-				throw std::invalid_argument("The shift value can not be greater than 127 (otherwise the generator is a LCG)")
+				throw std::invalid_argument("The shift value can not be greater than 127 (otherwise the generator is a LCG)");
 			}
 			this->state = seed;
 			this->mul = multiplier;
