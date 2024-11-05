@@ -2,7 +2,8 @@
 #include <cstdint>
 
 class SCG128 {
-	SCG128(__uint128_t seed, __uint128_t multiplier, __uint128_t additive,unsigned int shift) {
+	public:
+		SCG128(__uint128_t seed, __uint128_t multiplier, __uint128_t additive,unsigned int shift) {
 		if (multiplier == 0) {
 			throw std::invalid_argument("The multiplier can not be 0 (data loss)")
 		}
@@ -24,12 +25,12 @@ class SCG128 {
 		this->shift = shift;
     }
     // returns a 32 bit integer
-    uint32_t get32() {
+	uint32_t get32() {
 		state = (state ^ (state >> shift)) * mul * add;
 		return static_cast<uint32_t>(state >> 48);
 	}
 	
-    // returns a 64 bit integer
+		// returns a 64 bit integer
 	uint64_t get64() {
 		state = (state ^ (state >> shift)) * mul * add;
 		return static_cast<uint64_t>(state >> 32);
