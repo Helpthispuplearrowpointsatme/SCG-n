@@ -1,7 +1,7 @@
 # SCG-n
 
 ## What is it? <br/>
-a extremely fast generator that *can* have maximal period.
+The SCG is a rather fast generator that *can* have maximal period.
 
 ## How fast is it?  <br/>
 It let this speak for itself:
