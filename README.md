@@ -21,4 +21,5 @@ LCG64: 3984579 microseconds <br/>
 this was without compiler optimalizations.
 
 ## How does it work? <br/>
-The meaty part is this line: `x = (x ^ x >> s) * m + a;`
+The meaty part is this line: `x = (x ^ x >> s) * m + a;`<br/>
+you can choose all variables to be as big as you wish; i would reccomend 128 bits.
