@@ -1,5 +1,12 @@
-# SCG-n
+# the function <br/>
+This is the function that will be reffered to as 'the function'
+x = (x ^ y >> s) * a + b;
 
+## The 4 modes: <br/>
+There are two modes: chaotic and counter.<br/>
+In every mode there are two submodes: Univariable and multivariable.<br/>
+In chaotic mode, the state updates repetetively.<br/>
+In counter mode, the state is a counter and the output function the previosly described function.<br/>
 ## What is it? <br/>
 The SCG is a rather fast generator that *can* have maximal period.
 
